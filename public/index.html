@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./Font-Awesome/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css" crossorigin="anonymous">
+    <title>SpyDomain</title>
+</head>
+<body>
+    <!-- Navbar Section -->
+    <div class="topnav" id="myTopnav">
+        <a href="localhost:3000" class=brand>SpyDomain</a>
+        <a href="#contactsection" >Contact</a>
+        <a href="#aboutsection">About</a>
+        <a href="localhost:3000">Home</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <!-- Middle Section -->
+    <div class="middle-section">
+        <span class="inputDomain">
+            <form action="/" method="POST" enctype="text/html">
+            <input type="text" name="domain" placeholder="Enter your domain" class="inputDomain-box">
+            <button type="submit" class="inputDomain-search">Search</button>
+            </form>
+        </span>
+    <span class="quote"> 
+        <h2><b> If You Want Peace Prepare For Cyber War</b></h2>
+    </span> 
+    </div>
+<!-- Contact Section -->
+    
+    <div class="contact-section" id="contactsection">
+        <div id="block"></div>
+                <h4 class="contact-info">Contact Info</h4>
+                <div class="content-manager">
+                    <div class="contactsection-block">
+                        <p id="address">
+                    <h4><i class="fa fa-address-card" aria-hidden="true"></i>Address</h4> Acropolis Institute of Technology and Research, Indore <br> Madhya Pardesh ,India</p>
+                    </div>
+                    <div class="contactsection-block">
+                        <p id="phone">
+                        <h4><i class="fa fa-phone" aria-hidden="true"></i>Phone</h4>0731-4730000</p>
+                    </div>
+                    <div class="contactsection-block">
+                         <p id="email">
+                        <h4><i class="fa fa-envelope-o" aria-hidden="true" style="color: white;"></i>Email</h4><a href="">info@acropolis.in</a></p>
+                    </div>
+                </div>
+    </div>
+    
+    <div class="aboutSection" id="aboutsection">
+        <h2 id="aboutSection-head">About </br> Us</h2>
+        <span class="floating-part">Team Members</span>
+        <div class="aboutSection-profiles">
+            <div class="profile">
+                <img src="./prateek.jpeg" alt="">
+                <h3>Partik Gupta </br> Developer</h3>
+            </div>
+            <div class="profile">
+                <img src="./ravi-pot.jpg" alt="">
+                <h3>Ravi Varujana </br> Developer</h3>
+            </div>
+            <div class="profile">
+                <img src="./rishabh.jpeg" alt="">
+                <h3>Rishabh Rathore </br> Developer</h3>
+            </div>
+            <div class="profile">
+                <img src="./tanishq.jpeg" alt="">
+                <h3>Tanishq Patidar </br> Developer</h3>
+            </div>
+            <div class="profile">
+                <img src="./varun.jpg" alt="">
+                <h3>Varun Lachhwani </br> Developer</h3>
+            </div>
+        </div>
+    
+    </div>
+
+    <script>
+        $(function () {
+
+            $('.list-group-item').on('click', function () {
+                $('.glyphicon', this)
+                    .toggleClass('glyphicon-chevron-right')
+                    .toggleClass('glyphicon-chevron-down');
+            });
+
+        });
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+         
+    </script>
+</body>
+</html>

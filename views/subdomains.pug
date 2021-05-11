@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='style.css')
+    link(rel='stylesheet' href='Font-Awesome/fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css' crossorigin='anonymous')
+    title SpyDomain 
+  body
+    // Navbar Section
+    #myTopnav.topnav
+      a.brand(href='localhost:3000') SpyDomain
+      a(href='#contactsection') Contact
+      a(href='#aboutsection') About
+      a(href='localhost:3000') Home
+      a.icon(href='javascript:void(0);' style='font-size:15px;' onclick='myFunction()') ☰
+    // Middle Section
+    .middle-section
+      span.subdomain All Possible Subdomains
+      span.inputdomain
+        .domain
+        h3 
+          - for (var i = 0 ; i< domain.length ; i++) {
+            p=[i+1]+". "+ domain[i]
+          -}
+    // Contact Section
+    #contactsection.contact-section
+      #block
+      h4.contact-info Contact Info
+      .content-manager
+        .contactsection-block
+          p#address
+          h4
+            i.fa.fa-address-card(aria-hidden='true')
+            | Address
+          |  Acropolis Institute of Technology and Research, Indore 
+          br
+          |  Madhya Pardesh ,India
+          p
+        .contactsection-block
+          p#phone
+          h4
+            i.fa.fa-phone(aria-hidden='true')
+            | Phone
+          | 0731-4730000
+          p
+        .contactsection-block
+          p#email
+          h4
+            i.fa.fa-envelope-o(aria-hidden='true' style='color: white;')
+            | Email
+          a(href='') info@acropolis.in
+          p
+    #aboutsection.aboutSection
+      h2#aboutSection-head
+        | About 
+        br
+        |  Us
+      span.floating-part Team Members
+      .aboutSection-profiles
+        .profile
+          img(src='./prateek.jpeg' alt='')
+          h3
+            | Partik Gupta 
+            br
+            |  Developer
+        .profile
+          img(src='./ravi-pot.jpg' alt='')
+          h3
+            | Ravi Varujana 
+            br
+            |  Developer
+        .profile
+          img(src='./rishabh.jpeg' alt='')
+          h3
+            | Rishabh Rathore 
+            br
+            |  Developer
+        .profile
+          img(src='./tanishq.jpeg' alt='')
+          h3
+            | Tanishq Patidar 
+            br
+            |  Developer
+        .profile
+          img(src='./varun.jpg' alt='')
+          h3
+            | Varun Lachhwani 
+            br
+            |  Developer
+    script.
+      $(function () {
+      $('.list-group-item').on('click', function () {
+      $('.glyphicon', this)
+      .toggleClass('glyphicon-chevron-right')
+      .toggleClass('glyphicon-chevron-down');
+      });
+      });
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+      x.className += " responsive";
+      } else {
+      x.className = "topnav";
+      }
+      }
